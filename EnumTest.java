@@ -1,4 +1,14 @@
 public class EnumTest {
+    public enum Fruit3{
+        Orange,
+        Apple,
+        Melon,
+        Banana;
+        public String toString(){
+            return super.toString() + " TEST";
+        }
+    }
+
     public enum Fruit{
         Orange,
         Apple,
@@ -23,6 +33,9 @@ public class EnumTest {
         }
     }
     public static void main(String[] args){
+        for (Fruit3 test : Fruit3.values()){
+            System.out.println(test.toString() + " ### " + test.name());
+        }
         for(Fruit kudamono : Fruit.values()){
             System.out.println(kudamono.toString());
             System.out.println(kudamono.name());
